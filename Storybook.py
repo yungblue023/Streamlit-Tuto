@@ -2,7 +2,8 @@ import os
 import streamlit as st
 from openai import OpenAI
 
-client = OpenAI(api_key=os.environ['openaiapikey'])
+client = OpenAI(api_key=st.secret['openaiapikey']) # when launching in git
+#client = OpenAI(api_key=os.environ['openaiapikey'])
 
 
 #story generator method
